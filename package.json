@@ -1,0 +1,30 @@
+{
+  "name": "mini-chat",
+  "private": true,
+  "description": "A small, readable realtime chat starter: Nuxt 4 PWA + NestJS + PostgreSQL.",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "postinstall": "pnpm --filter @mini-chat/shared build",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "test:e2e": "playwright test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:migrate": "pnpm --filter @mini-chat/api db:migrate",
+    "db:revert": "pnpm --filter @mini-chat/api db:revert",
+    "db:migration:generate": "pnpm --filter @mini-chat/api db:migration:generate",
+    "db:seed": "pnpm --filter @mini-chat/api db:seed"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3"
+  }
+}

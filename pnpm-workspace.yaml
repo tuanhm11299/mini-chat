@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@parcel/watcher'
+  - argon2
+  - esbuild
+  - sharp
+  - vue-demi
+
+ignoredBuiltDependencies:
+  - '@scarf/scarf'
+  - unrs-resolver
