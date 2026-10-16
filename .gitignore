@@ -1,0 +1,29 @@
+node_modules
+dist
+coverage
+
+# Nuxt
+.nuxt
+.output
+.data
+.nitro
+.cache
+apps/web/public/sw.js
+apps/web/public/workbox-*.js
+
+# Env files (commit only the *.example versions)
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Playwright
+test-results
+playwright-report
+
+# Editors / OS
+.idea
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.log
